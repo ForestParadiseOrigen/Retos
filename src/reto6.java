@@ -21,6 +21,7 @@ public class reto6 {
             }else{
                 System.out.println("Palabra incorrecta. Debes volver a intentarlo.");
             }
+            System.out.println("¿Deseas volver a intentarlo?\nResponde.\nSi: s\nNo: n");
         }while(r.equalsIgnoreCase("s"));
 
         sc.close();
