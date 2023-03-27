@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//Arreglos n numeros multiplos de 2
 public class reto9 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -18,7 +19,7 @@ public class reto9 {
         System.out.println("Ingrese los numeros.");
 
         for(int i = 0; i < canNum; i++){
-            System.out.print((i+1) + ". ");
+            System.out.print(i + ". "); //El espcio donde va a colocar el numero
             num[i] = sc.nextInt();
 
         }

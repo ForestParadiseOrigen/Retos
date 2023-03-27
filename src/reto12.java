@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//Concentrate
 public class reto12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -33,7 +34,7 @@ public class reto12 {
                 System.out.print(palabras[f][c] + "\t");
             }System.out.println("");
         }
-        //Pedimos que bisque las palabras
+        //Pedimos que busque las palabras
         System.out.println("------------------------------------------------------------");
         System.out.println("¿Estas preparado para comenzar a jugar?\nSi//No");
         r = sc.next();
@@ -56,7 +57,7 @@ public class reto12 {
             }
             
             if(status1 && status2 == true){
-                
+                System.out.println("has ganado.");
             }else if(status1 || status2 == false){
                 System.out.println("PALABRA 1");
             System.out.print("Digite el numero de la culumna: "); pal1res1 = sc.nextInt();

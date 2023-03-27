@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+//Ciclos Descubre la palabra
 public class reto6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -16,12 +18,16 @@ public class reto6 {
         ru = sc.next();
 
         do{
+
             if(ru.equalsIgnoreCase("cargador")){
                 System.out.println("¡Exacto! La palabra era: " + p + ".\n" + "¡Has descubierto la palabra!");
             }else{
                 System.out.println("Palabra incorrecta. Debes volver a intentarlo.");
+                ru = "";
             }
             System.out.println("¿Deseas volver a intentarlo?\nResponde.\nSi: s\nNo: n");
+            r = sc.next();
+            
         }while(r.equalsIgnoreCase("s"));
 
         sc.close();
