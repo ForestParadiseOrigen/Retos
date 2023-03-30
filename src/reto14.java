@@ -8,7 +8,7 @@ public class reto14 {
         String nombre;
         int apostado, computadora, jugada, vidas = 3;
         String r = "n"; // Respuesta a "¿Quieres volver a jugar?"
-        int pc = 3; //Vidas del pc
+        int pc = 3; // Vidas del pc
 
         // Pedimos datos.
         System.out.println("¿Cual es tu nombre?");
@@ -17,15 +17,22 @@ public class reto14 {
         System.out.println("¿Cuanto dinero deseas apostar?");
         apostado = sc.nextInt();
 
-        if(apostado >= 1000){
+        if (apostado >= 1000) {
+            // Comenzamos a jugar.
+            System.out.println("<--CARA O SELLO-->");
+            System.out.println("Ingresa tu jugada.");
+            System.out.println("1.Cara.\n2.Sello."); // Toca explicar como usar el programa.
+            jugada = sc.nextInt();
+
+            computadora = (int) (Math.random() * 2) + 1; // Esto lo busque en internet... no lo copié.
             do {
                 vidas = 3;
                 pc = 3;
                 while (vidas > 0 || pc > 0) { // Desconteo de vidas.
-                    //Juego
-                     // Condiciones
+                    // Juego
+                    // Condiciones
                     System.out.println("----------------------------------------");
-                    if (computadora ==1 & jugada == 1) { // Piedra no gana piedra. 1 piedra
+                    if (computadora == 1 & jugada == 1) { // Piedra no gana piedra. 1 piedra
                         System.out.println("Tu jugada fue: Cara.");
                         System.out.println("La jugada de tu pc fue: Cara.");
                         System.out.println("!EMPATE!");
@@ -55,35 +62,25 @@ public class reto14 {
                     }
                 }
 
-                //Ganas o pierdes dinero
-                if(vidas == 0){
+                // Ganas o pierdes dinero
+                if (vidas == 0) {
                     System.out.println("Has perdido: 1000 pesos, tu saldo actual es: " + apostado);
                     apostado -= 1000;
-                }else if(pc == 0){
+                } else if (pc == 0) {
                     System.out.println("Has ganado: 1000 pesos, tu saldo actual es: " + apostado);
                     apostado += 1000;
                 }
-                //Deseas volver a jugar?
+                // Deseas volver a jugar?
                 System.out.println("-----------------------------------------------------------");
                 System.out.println("¿Deseas volver a jugar?\nResponda:\nSi: s\nNo: n");
                 r = sc.next();
-    
+
             } while (r.equalsIgnoreCase("s"));
-            //NO te queda dinero
-        }else{
+            // NO te queda dinero
+        } else {
             System.out.println("No tienes suficiente dinero apostado como para entrar a jugar.");
         }
 
         sc.close();
     }
 }
-// Comenzamos a jugar.
-System.out.println("<--CARA O SELLO-->");System.out.println("Ingresa tu jugada.");System.out.println("1.Cara.\n2.Sello."); // Toca
-                                                                                                                           // explicar
-                                                                                                                           // como
-                                                                                                                           // usar
-                                                                                                                           // el
-                                                                                                                           // programa.
-jugada=sc.nextInt();
-
-computadora=(int)(Math.random()*2)+1; // Esto lo busque en internet... no lo copié.
